@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "frontTest"
+    }
+  },
+  "defaultProject": "frontTest",
+  "cli": {
+    "analytics": false
+  }
 }
