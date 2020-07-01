@@ -25,8 +25,12 @@
     padding-bottom: 30px;
 }
 
-.actions {
+.actions-all {
 	padding: 30px 0px;
+}
+
+.actions {
+    float: right;
 }
 
 .button {
@@ -38,4 +42,21 @@
 	border: 1px solid #343a40;
 	padding: 6px 12px;
 	border-radius: 5px;
+}
+
+.button-space {
+	margin-left: 20px;
+}
+
+.names {
+	border: 1px solid;
+}
+
+.name {
+	border-bottom: 1px solid;
+	padding: 20px;
+}
+
+input {
+	padding: 5px 0px;
 }

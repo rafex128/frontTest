@@ -4,18 +4,40 @@
   </p>
 </header>
 <div class="body">
+  <label for="">Add New User</label>
   <div class="add">
-    <label for="">Add New User</label>
-    <input type="text"> <button class="button">Add</button>
+    <input type="text" [(ngModel)]="newUsername"> <button class="button button-space" *ngIf="newUsername" (click)="addNewUser()">Add</button>
   </div>
 
-  <div class="actions">
-    <button class="button">edit all</button>
-    <button class="button">Delete all</button>
+  <div class="actions-all" *ngIf="usernames.length > 0 && !editAllNames">
+    <button class="button" (click)="editAll()">Edit all</button>
+    <button class="button button-space" (click)="deleteAll()">Delete all</button>
   </div>
 
-  <div class="names">
-    
+  <div class="actions-all" *ngIf="editAllNames">
+    <button class="button" (click)="saveAll()">Save all</button>
+  </div>  
+
+  <div class="names" *ngIf="usernames.length > 0">
+    <div class="name" *ngFor="let username of usernames; index as i">
+    	<div *ngIf="!editName[i]">
+	    	<span>
+	    		{{username.name}}
+	    	</span>
+
+	    	<div class="actions">
+	    		<button class="button" (click)="edit(i)">Edit</button>
+	    		<button class="button button-space" (click)="delete(i)">Delete</button>
+	    	</div>
+    	</div>
+    	<div *ngIf="editName[i]">
+    		<input type="text" name="username" [(ngModel)]="username.name">
+
+	    	<div class="actions" *ngIf="!editAllNames">
+	    		<button class="button" (click)="edit(i)">Save</button>
+	    	</div>
+    	</div>
+    </div>
   </div>
 </div>
 <footer id="footer">
