@@ -1,6 +1,9 @@
 # Obs
 The test `files dashboard.component.spec.ts` and `user-names.service.spec.ts` was writing by me and others was generates by Angular CLI
 
+# Dependencies
+To install node dependencies run `npm install`
+
 # FrontTest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
